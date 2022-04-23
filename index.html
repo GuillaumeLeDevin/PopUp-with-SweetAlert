@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SweetAlert.Js</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Sweet Alert JS</h1>
+    <button id="btn1">Clique moi!</button>
+
+    <script>
+        let btn = document.getElementById('btn1');
+
+        btn.onclick = function() {
+
+            //Alerte de base:
+            //swal('Hello!');
+
+            //Modal et texte:
+            //swal('Mon titre', 'Et le texte associé...');
+            
+            //Alerte avec icone ('info', 'warning', 'error', 'success')
+            //swal('Félicitation', 'Votre commande est prise en compte','info');
+
+            //Utilisation avec un objet en paramètre
+            // swal({
+            //     title: 'Bravo!',
+            //     text: 'La commande arrive',
+            //     icon: 'success',
+            //     button: 'C\'est vraiment génial'
+            // })
+
+            //Utilisation d'une promesse Js
+            // swal('Cliquez sur le bouton pour continuer!')
+            // .then((value) => {
+            //     swal(`La valeur retournée est ${value}`);
+            // });
+
+            swal({
+                title: 'Êtes-vous sûr?',
+                text: 'Une fois cliqué sur \'OK\', pas de retour en arrière',
+                icon: 'warning',
+                buttons: true,
+                dangerMode: true
+            })
+            .then((ok) => {
+                if(ok){
+                    swal('Votre commande est en cours de livraison!', {
+                        icon: 'success',
+                    });
+                } else {
+                    swal('Vous êtes revenu en arrière.', {
+                        icon: 'info',
+                    });
+                }
+            })
+        }
+    </script>
+</body>
+</html>
