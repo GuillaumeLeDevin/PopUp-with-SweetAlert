@@ -5,7 +5,7 @@ html, body {
     display: block;
     width: 200px;
     padding: 15px;
-    font-size: 25px;
+    font-size: 35px;
     line-height: 1.5;
     border-radius: 6px;
     color: #fff;
@@ -18,7 +18,7 @@ html, body {
 }
 h1 {
     font-family: sans-serif;
-    font-size: 60px;
+    font-size: 80px;
     width: fit-content;
     position: relative;
     top: 28%;
